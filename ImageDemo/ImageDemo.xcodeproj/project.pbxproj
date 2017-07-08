@@ -16,6 +16,9 @@
 		C37769C01F1076FB0033F279 /* IMG_2950.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C37769BF1F1076FB0033F279 /* IMG_2950.JPG */; };
 		C37769C31F108CC80033F279 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37769C21F108CC80033F279 /* CameraViewController.m */; };
 		C37769C61F108CEC0033F279 /* ImageEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37769C51F108CEC0033F279 /* ImageEditViewController.m */; };
+		C37769CA1F1113770033F279 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = C37769C81F1113770033F279 /* Shader.fsh */; };
+		C37769CB1F1113770033F279 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = C37769C91F1113770033F279 /* Shader.vsh */; };
+		C37769CE1F1113BD0033F279 /* GLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C37769CD1F1113BD0033F279 /* GLUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,10 @@
 		C37769C21F108CC80033F279 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		C37769C41F108CEC0033F279 /* ImageEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEditViewController.h; sourceTree = "<group>"; };
 		C37769C51F108CEC0033F279 /* ImageEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageEditViewController.m; sourceTree = "<group>"; };
+		C37769C81F1113770033F279 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		C37769C91F1113770033F279 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		C37769CC1F1113BD0033F279 /* GLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUtils.h; sourceTree = "<group>"; };
+		C37769CD1F1113BD0033F279 /* GLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +57,7 @@
 		C377699B1F1075150033F279 = {
 			isa = PBXGroup;
 			children = (
+				C37769C71F1113770033F279 /* Shaders */,
 				C37769BE1F1076FB0033F279 /* Resources */,
 				C37769A61F1075150033F279 /* ImageDemo */,
 				C37769A51F1075150033F279 /* Products */,
@@ -67,6 +75,8 @@
 		C37769A61F1075150033F279 /* ImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C37769CC1F1113BD0033F279 /* GLUtils.h */,
+				C37769CD1F1113BD0033F279 /* GLUtils.m */,
 				C37769AA1F1075150033F279 /* AppDelegate.h */,
 				C37769AB1F1075150033F279 /* AppDelegate.m */,
 				C37769AD1F1075150033F279 /* MainViewController.h */,
@@ -99,6 +109,16 @@
 			);
 			name = Resources;
 			path = ImageDemo/Resources;
+			sourceTree = "<group>";
+		};
+		C37769C71F1113770033F279 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				C37769C81F1113770033F279 /* Shader.fsh */,
+				C37769C91F1113770033F279 /* Shader.vsh */,
+			);
+			name = Shaders;
+			path = ImageDemo/Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +182,10 @@
 			files = (
 				C37769B71F1075150033F279 /* LaunchScreen.storyboard in Resources */,
 				C37769B41F1075150033F279 /* Assets.xcassets in Resources */,
+				C37769CB1F1113770033F279 /* Shader.vsh in Resources */,
 				C37769B21F1075150033F279 /* Main.storyboard in Resources */,
 				C37769C01F1076FB0033F279 /* IMG_2950.JPG in Resources */,
+				C37769CA1F1113770033F279 /* Shader.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37769CE1F1113BD0033F279 /* GLUtils.m in Sources */,
 				C37769C61F108CEC0033F279 /* ImageEditViewController.m in Sources */,
 				C37769AF1F1075150033F279 /* MainViewController.m in Sources */,
 				C37769C31F108CC80033F279 /* CameraViewController.m in Sources */,
@@ -339,6 +362,7 @@
 				C37769BD1F1075150033F279 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
