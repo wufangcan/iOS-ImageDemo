@@ -1,18 +1,33 @@
 //
-//  ViewController.m
+//  ImageEditViewController.m
 //  ImageDemo
 //
 //  Created by Carl on 2017/7/8.
 //  Copyright © 2017年 Carl. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ImageEditViewController.h"
 
-@interface ViewController ()
-    @property (strong, nonatomic) UIImageView *imageView;
+@interface ImageEditViewController ()
+@property (strong, nonatomic) UIImageView *imageView;
 @end
 
-@implementation ViewController
+@implementation ImageEditViewController
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+    
+-(void)loadView
+{
+    [super loadView];
+    
+    UIView *view=[[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    view.alpha=1.0f;
+    view.backgroundColor=[UIColor whiteColor];
+    self.view=view;
+}
     
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,6 +58,13 @@
     [rightButton addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:rightButton];
     
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [backBtn setTitle:@"<" forState:UIControlStateNormal];
+    [backBtn setBackgroundColor:[UIColor colorWithRed:0.8f green:0.8f blue:0.8f alpha:0.5f]];
+    [backBtn setFrame:CGRectMake(0, 20, 65, 30)];
+    [backBtn addTarget:self action:@selector(backLastViewController) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:backBtn];
+    
     
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -51,20 +73,29 @@
 - (void)click:(UIButton *)button {
     switch (button.tag) {
         case 0:
-            NSLog(@"left button touch down.");
+        NSLog(@"left button touch down.");
         break;
         case 1:
-            NSLog(@"right button touch down.");
+        NSLog(@"right button touch down.");
         break;
         default:
         break;
     }
 }
+
     
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)backLastViewController {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-    
-    
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
 @end

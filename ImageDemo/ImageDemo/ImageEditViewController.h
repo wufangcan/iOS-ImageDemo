@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ImageEditViewController.h
 //  ImageDemo
 //
 //  Created by Carl on 2017/7/8.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ImageEditViewController : UIViewController
 
 @end
-
