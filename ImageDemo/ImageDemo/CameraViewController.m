@@ -43,14 +43,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    [backBtn setTitle:@"<" forState:UIControlStateNormal];
-    [backBtn setBackgroundColor:[UIColor colorWithRed:0.8f green:0.8f blue:0.8f alpha:0.5f]];
-    [backBtn setFrame:CGRectMake(0, 20, 65, 30)];
-    [backBtn addTarget:self action:@selector(backLastViewController) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:backBtn];
-    
+
     _context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     self.preferredFramesPerSecond = 60;
     
@@ -71,6 +64,8 @@
     [EAGLContext setCurrentContext:_context];
     
     _program = [GLUtils loadProgramWithVertexShaderFile:[[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"] fragmentShaderFile:[[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"]];
+    
+    glClearColor(1.0, 1.0, 1.0, 1.0);
 }
     
 - (void)tearDownGL {
@@ -240,15 +235,10 @@
     // Dispose of any resources that can be recreated.
 }
     
-- (void)backLastViewController {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-    
 - (void)update {
 
 }
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
-    glClearColor(1.0, 1.0, 1.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     glUseProgram(_program);
     

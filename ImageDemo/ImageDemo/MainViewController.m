@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "ImageEditViewController.h"
 #import "CameraViewController.h"
+#import "pthread_test.h"
 
 @interface MainViewController ()
     
@@ -47,14 +48,14 @@
     
 - (void)actionOpenCamera {
     CameraViewController *cameraViewController = [[CameraViewController alloc] init];
-    //    [self.navigationController pushMainViewController:imageEditMainViewController animated:YES];self.navigationController == nil
+    [self.navigationController pushViewController:cameraViewController animated:YES];
     [self presentViewController:cameraViewController animated:YES completion:nil];
 }
 
 - (void)actionOpenImageEdit {
     ImageEditViewController *imageEditViewController = [[ImageEditViewController alloc] init];
-    //    [self.navigationController pushMainViewController:imageEditMainViewController animated:YES];self.navigationController == nil
-    [self presentViewController:imageEditViewController animated:YES completion:nil];
+    [self.navigationController pushViewController:imageEditViewController animated:YES];
+//    [self presentViewController:imageEditViewController animated:YES completion:nil];
 }
     
     

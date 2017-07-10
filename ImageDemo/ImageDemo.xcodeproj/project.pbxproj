@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C32DA1691F11C4D10037C3A5 /* pthread_test.c in Sources */ = {isa = PBXBuildFile; fileRef = C32DA1671F11C4D10037C3A5 /* pthread_test.c */; };
 		C37769A91F1075150033F279 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C37769A81F1075150033F279 /* main.m */; };
 		C37769AC1F1075150033F279 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C37769AB1F1075150033F279 /* AppDelegate.m */; };
 		C37769AF1F1075150033F279 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37769AE1F1075150033F279 /* MainViewController.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C32DA1671F11C4D10037C3A5 /* pthread_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pthread_test.c; sourceTree = "<group>"; };
+		C32DA1681F11C4D10037C3A5 /* pthread_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pthread_test.h; sourceTree = "<group>"; };
 		C37769A41F1075150033F279 /* ImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37769A81F1075150033F279 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C37769AA1F1075150033F279 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C32DA1661F11C4B40037C3A5 /* pthread */ = {
+			isa = PBXGroup;
+			children = (
+				C32DA1671F11C4D10037C3A5 /* pthread_test.c */,
+				C32DA1681F11C4D10037C3A5 /* pthread_test.h */,
+			);
+			name = pthread;
+			sourceTree = "<group>";
+		};
 		C377699B1F1075150033F279 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +87,7 @@
 		C37769A61F1075150033F279 /* ImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C32DA1661F11C4B40037C3A5 /* pthread */,
 				C37769CC1F1113BD0033F279 /* GLUtils.h */,
 				C37769CD1F1113BD0033F279 /* GLUtils.m */,
 				C37769AA1F1075150033F279 /* AppDelegate.h */,
@@ -198,6 +211,7 @@
 			files = (
 				C37769CE1F1113BD0033F279 /* GLUtils.m in Sources */,
 				C37769C61F108CEC0033F279 /* ImageEditViewController.m in Sources */,
+				C32DA1691F11C4D10037C3A5 /* pthread_test.c in Sources */,
 				C37769AF1F1075150033F279 /* MainViewController.m in Sources */,
 				C37769C31F108CC80033F279 /* CameraViewController.m in Sources */,
 				C37769AC1F1075150033F279 /* AppDelegate.m in Sources */,

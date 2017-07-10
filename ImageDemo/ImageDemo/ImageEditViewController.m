@@ -58,15 +58,6 @@
     [rightButton addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:rightButton];
     
-    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    [backBtn setTitle:@"<" forState:UIControlStateNormal];
-    [backBtn setBackgroundColor:[UIColor colorWithRed:0.8f green:0.8f blue:0.8f alpha:0.5f]];
-    [backBtn setFrame:CGRectMake(0, 20, 65, 30)];
-    [backBtn addTarget:self action:@selector(backLastViewController) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:backBtn];
-    
-    
-    
     // Do any additional setup after loading the view, typically from a nib.
 }
     
@@ -81,11 +72,6 @@
         default:
         break;
     }
-}
-
-    
-- (void)backLastViewController {
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*
